@@ -5,12 +5,14 @@ import { CoreRoutingModule } from './core-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FootercpyrtsComponent } from './footercpyrts/footercpyrts.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    FootercpyrtsComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   exports: [ 
     NavbarComponent,
-    SidebarComponent 
+    SidebarComponent,
+    FootercpyrtsComponent 
   ]
 })
 export class CoreModule { }
