@@ -6,9 +6,9 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./contact-page.component.css'],
 })
 export class ContactPageComponent {
-  FullName = '';
-  email = '';
-  message = '';
+  FullName: string = '';
+  email: string = '';
+  message: string = '';
 
   sendMessage() {
     if (this.message.trim() === '') {
