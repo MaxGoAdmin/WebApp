@@ -3,15 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FootercpyrtsComponent } from './footercpyrts/footercpyrts.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    SidebarComponent,
     FootercpyrtsComponent
   ],
   imports: [
@@ -21,7 +19,6 @@ import { FootercpyrtsComponent } from './footercpyrts/footercpyrts.component';
   ],
   exports: [ 
     NavbarComponent,
-    SidebarComponent,
     FootercpyrtsComponent 
   ]
 })
