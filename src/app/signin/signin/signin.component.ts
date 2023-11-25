@@ -20,12 +20,12 @@ export class SigninComponent {
     password: ['', [Validators.required]],
   });
 
-  public onSubmit(): void {
-    let email = this.signinForm.controls['email'].value;
-    let password = this.signinForm.controls['password'].value;
+  // public onSubmit(): void {
+  //   let email = this.signinForm.controls['email'].value;
+  //   let password = this.signinForm.controls['password'].value;
 
-    alert('Email: ' + email + '\nPassword: ' + password);
-  }
+  //   alert('Email: ' + email + '\nPassword: ' + password);
+  // }
   get f() {
     return this.signinForm.controls;
   }
