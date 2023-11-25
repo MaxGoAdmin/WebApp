@@ -6,9 +6,16 @@ import { SigninRoutingModule } from './signin-routing.module';
 import { SigninComponent } from './signin/signin.component';
 
 const routes: Routes = [{ path: '', component: SigninComponent }];
+
+
 @NgModule({
   declarations: [SigninComponent],
   imports: [CommonModule, ReactiveFormsModule, RouterModule.forChild(routes)],
+
+@NgModule({
+  declarations: [SigninComponent],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule.forChild(routes)],
+
 
   exports: [SigninComponent, RouterModule],
 })

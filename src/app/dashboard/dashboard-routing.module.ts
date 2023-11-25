@@ -5,12 +5,6 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-
-  exports: [RouterModule],
-})
-export class SigninRoutingModule {}
-
   exports: [RouterModule]
 })
-export class SigninRoutingModule { }
-
+export class DashboardRoutingModule { }
