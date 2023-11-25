@@ -8,11 +8,7 @@
         <p class="text-[#808191]">Please enter your details.</p>
       </div>
       <div class="signin-form pt-[2rem]">
-        <form
-          class="flex flex-col"
-          [formGroup]="signinForm"
-          (ngSubmit)="onSubmit()"
-        >
+        <form class="flex flex-col" [formGroup]="signinForm">
           <label class="mb-[0.4rem]" for="fname">Email</label>
           <input
             type="email"
@@ -60,7 +56,7 @@
               Password is required
             </div>
           </div>
-          <div class="flex justify-between mt-[1.5rem]">
+          <div class="forget flex justify-between mt-[1.5rem]">
             <div class="flex">
               <input
                 type="checkbox"
@@ -70,7 +66,7 @@
               />
               <label for="reminder"> Remember me</label>
             </div>
-            <div>
+            <div class="link">
               <a
                 (click)="redirectForget()"
                 class="text-[#475BE8] cursor-pointer"
@@ -79,7 +75,8 @@
             </div>
           </div>
           <button
-            (click)="redirectProperty()"
+            class="btn"
+            (click)="redirectDashboard()"
             type="submit"
             [disabled]="signinForm.invalid"
             class="w-full py-[0.7rem] bg-[#475BE8] text-white rounded-[1rem] mt-[2rem]"
@@ -92,7 +89,7 @@
             >
               <img
                 class="me-[1rem]"
-                src="../../../assets/image/google.png"
+                src="../../../assets/image/Google__G__Logo (1) 1.png"
               />Sign in with Google
             </button>
           </div>

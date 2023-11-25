@@ -35,7 +35,7 @@ export class SigninComponent {
   redirectForget() {
     this.router.navigate(['/forgot-password']);
   }
-  redirectProperty() {
-    this.router.navigate(['/properties']);
+  redirectDashboard() {
+    this.router.navigate(['/dashboard']);
   }
 }
