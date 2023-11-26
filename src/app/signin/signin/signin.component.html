@@ -8,7 +8,14 @@
         <p class="text-[#808191]">Please enter your details.</p>
       </div>
       <div class="signin-form pt-[2rem]">
+
         <form class="flex flex-col" [formGroup]="signinForm">
+        <form
+          class="flex flex-col"
+          [formGroup]="signinForm"
+          (ngSubmit)="onSubmit()"
+        >
+
           <label class="mb-[0.4rem]" for="fname">Email</label>
           <input
             type="email"
@@ -56,6 +63,12 @@
               Password is required
             </div>
           </div>
+
+          <div class="flex justify-between mt-[1.5rem]">
+
+
+          <div class="forget flex justify-between mt-[1.5rem]">
+
           <div class="flex justify-between mt-[1.5rem]">
             <div class="flex">
               <input
@@ -66,7 +79,11 @@
               />
               <label for="reminder"> Remember me</label>
             </div>
+
             <div class="link">
+
+            <div>
+
               <a
                 (click)="redirectForget()"
                 class="text-[#475BE8] cursor-pointer"
@@ -75,7 +92,15 @@
             </div>
           </div>
           <button
+
+
+
+            class="btn"
+
             (click)="redirectDashboard()"
+
+            (click)="redirectProperty()"
+
             type="submit"
             [disabled]="signinForm.invalid"
             class="w-full py-[0.7rem] bg-[#475BE8] text-white rounded-[1rem] mt-[2rem]"
@@ -87,8 +112,10 @@
               class="btn-signin-google w-full py-[0.7rem] bg-white border-2 border-[#E4E4E4] rounded-[1rem] flex justify-center"
             >
               <img
-                class="me-[1rem]"
+                class="me-[1rem]
                 src="../../../assets/image/Google__G__Logo (1) 1.png"
+                src="../../../assets/image/google.png"
+
               />Sign in with Google
             </button>
           </div>
