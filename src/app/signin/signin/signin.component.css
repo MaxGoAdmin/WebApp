@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 1300px) {
     .right-side img{
        margin-top: 26%;
@@ -101,3 +102,14 @@ button {
     }
    
     }
+
+@media screen and (max-width: 768px) {
+.right-side{
+    display: none;
+}
+.siginpage-container{
+    display: flex;
+    justify-content: center;
+}
+}
+
