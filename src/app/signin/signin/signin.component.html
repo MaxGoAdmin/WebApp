@@ -1,0 +1,132 @@
+<div class="siginpage-container h-screen flex">
+  <div class="left-side w-full md:w-6/12 flex items-center justify-center">
+    <div class="content w-[362px]">
+      <div class="heading">
+        <h1>Welcome back</h1>
+      </div>
+      <div class="description">
+        <p class="text-[#808191]">Please enter your details.</p>
+      </div>
+      <div class="signin-form pt-[2rem]">
+
+        <form class="flex flex-col" [formGroup]="signinForm">
+        <form
+          class="flex flex-col"
+          [formGroup]="signinForm"
+          (ngSubmit)="onSubmit()"
+        >
+
+          <label class="mb-[0.4rem]" for="fname">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            class="py-[0.7rem] px-[0.8rem] border-2 border-[#E4E4E4] rounded-[1rem]"
+            [class.is-invalid]="f['email'].invalid && f['email'].touched"
+            formControlName="email"
+          />
+          <div
+            class="alert alert-danger pt-[0.8rem]"
+            *ngIf="f['email'].invalid && f['email'].touched"
+          >
+            <div
+              class="text-red-600"
+              *ngIf="f['email'].errors && f['email'].errors['required']"
+            >
+              Email is required
+            </div>
+            <div
+              class="text-red-600"
+              *ngIf="f['email'].errors && f['email'].errors['email']"
+            >
+              Invalid Email
+            </div>
+          </div>
+
+          <label class="mt-[1.5rem] mb-[0.4rem]" for="fname">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="**********"
+            class="py-[0.7rem] px-[0.8rem] border-2 border-[#E4E4E4] rounded-[1rem]"
+            [class.is-invalid]="f['password'].invalid && f['password'].touched"
+            formControlName="password"
+          />
+          <div
+            class="alert alert-danger pt-[0.8rem]"
+            *ngIf="f['password'].invalid && f['password'].touched"
+          >
+            <div
+              class="text-red-600"
+              *ngIf="f['password'].errors && f['password'].errors['required']"
+            >
+              Password is required
+            </div>
+          </div>
+
+          <div class="flex justify-between mt-[1.5rem]">
+
+
+          <div class="forget flex justify-between mt-[1.5rem]">
+
+          <div class="flex justify-between mt-[1.5rem]">
+            <div class="flex">
+              <input
+                type="checkbox"
+                class="w-[1rem] h-[1rem] border-2 border-[#E4E4E4] rounded-[0.4rem] me-[0.6rem]"
+                name="reminder"
+                value="reminder"
+              />
+              <label for="reminder"> Remember me</label>
+            </div>
+
+            <div class="link">
+
+            <div>
+
+              <a
+                (click)="redirectForget()"
+                class="text-[#475BE8] cursor-pointer"
+                >Forgot Password</a
+              >
+            </div>
+          </div>
+          <button
+
+
+
+            class="btn"
+
+            (click)="redirectDashboard()"
+
+            (click)="redirectProperty()"
+
+            type="submit"
+            [disabled]="signinForm.invalid"
+            class="w-full py-[0.7rem] bg-[#475BE8] text-white rounded-[1rem] mt-[2rem]"
+          >
+            Sign in
+          </button>
+          <div class="signin-with-google pt-[2rem]">
+            <button
+              class="btn-signin-google w-full py-[0.7rem] bg-white border-2 border-[#E4E4E4] rounded-[1rem] flex justify-center"
+            >
+              <img
+                class="me-[1rem]
+                src="../../../assets/image/Google__G__Logo (1) 1.png"
+                src="../../../assets/image/google.png"
+
+              />Sign in with Google
+            </button>
+          </div>
+          <div class="signup-link pt-[3rem] text-center">
+            <a (click)="openSignUp()">Don't have an Account? Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="right-side w-full md:w-6/12 hidden md:block">
+    <img class="w-[85%] mt-[12%]" src="../../../assets/image/amico.png" />
+  </div>
+</div>
