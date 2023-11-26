@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
@@ -15,3 +16,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   ]
 })
 export class LandingPageModule { }
+
+import { LandingPageRoutingModule } from './landing-page-routing.module';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactPageModule } from '../contact-page/contact-page.module';
+@NgModule({
+  declarations: [LandingPageComponent],
+  imports: [CommonModule, LandingPageRoutingModule, ContactPageModule],
+})
+export class LandingPageModule {}
+

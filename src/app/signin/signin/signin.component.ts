@@ -37,5 +37,9 @@ export class SigninComponent {
   }
   redirectDashboard() {
     this.router.navigate(['/dashboard']);
+
+  redirectProperty() {
+    this.router.navigate(['/properties']);
+
   }
 }
