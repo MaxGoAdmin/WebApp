@@ -104,7 +104,10 @@ input {
 .text-area{
     height:150px
 }
+.content {
+    text-align: center;
 
+}
 }
 @media screen and (max-width: 375px) {
     .heading p {
@@ -112,5 +115,9 @@ input {
 }
 .text-area{
     height:110px
+}
+.content {
+    text-align: center;
+
 }
 }
