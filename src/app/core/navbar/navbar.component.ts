@@ -11,19 +11,28 @@ export class NavbarComponent {
   public shownotifications:boolean = false;
   public showprofileoptions:boolean = false;
 
-  togglehamburgermenu() {
+  togglehamburgermenu():void {
 
     this.showhamburgermenu = !this.showhamburgermenu;
   }
 
-  toggleNotifications() {
+  toggleNotifications():void {
 
     this.shownotifications = !this.shownotifications;
+    if(this.shownotifications == true) {
+    
+      this.showprofileoptions = false;
+    }
   }
 
-  toggleProfile() { 
+  toggleProfile():void { 
     
-    this.showprofileoptions = !this.showprofileoptions; 
+    this.showprofileoptions = !this.showprofileoptions;
+    
+    if(this.showprofileoptions == true) {
+      
+      this.shownotifications = false;
+    } 
   }
 
 }

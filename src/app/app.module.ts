@@ -16,13 +16,12 @@ import { SigninModule } from './signin/signin.module';
   declarations: [
     AppComponent,
   ],
-  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    CoreModule
+    CoreModule,
 
 
     SigninModule,
