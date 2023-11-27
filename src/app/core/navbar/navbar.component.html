@@ -1,0 +1,47 @@
+<nav class="navbar flex bg-white pl-[20px] pr-[55px] py-[15px]">
+    <div class="left-side w-1/5 flex justify-start items-center relative">
+        <div class="hamburger-icon-div">
+            <img (click)="togglehamburgermenu()" class="w-[18px] h-[14px] hamburgericon-img" src="assets/image/hamburger-icon.png">
+        </div>
+        <div class="hamburger-menu bg-gray-200 w-[90vw] absolute top-[63px] bg-white p-[15px] rounded-[15px]" *ngIf="showhamburgermenu">
+            <ul class="text-center">
+                <li class="py-3"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="py-3"><a routerLink="/contact">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side w-4/5 flex items-center">
+        <div class="nav-menu pr-[90px] mx-auto">
+            <a class="mr-[20px] hover:text-[#475BE8]" routerLink="/dashboard">Dashboard</a>
+            <a class="hover:text-[#475BE8]" routerLink="/contact">Contacts</a>
+        </div>
+        <div class="nav-notifications-div ms-auto relative">
+            <div class="bell-icon-div">
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <img class="w-[7px] h-[7px] absolute top-[2px] right-[1px]" src="assets/image/ellipse-red.png">
+                    <img class="w-[24px] h-[24px]" src="assets/image/bell-icon.png">
+                </button>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>John invited you</button>
+                <button mat-menu-item>You have message from Peter</button>
+                </mat-menu>
+            </div>
+        </div>
+        <div class="nav-profile pl-[20px]">
+            <button mat-button [matMenuTriggerFor]="profile">
+                <div class="flex">
+                <div class="profile-img-div">
+                    <img class="w-[40px] h-[40px]" src="assets/image/profile-image.png" />
+                </div>
+                <div class="profile-details-div pl-[10px] flex flex-col text-start">
+                    <span class="text-[14px] text-[#11142D]">Hawkins Maru</span>
+                    <span class="text-[14px] text-[#808191]">Company Manager</span>
+                </div>
+                </div>    
+            </button>
+            <mat-menu #profile="matMenu">
+            <button mat-menu-item>Logout</button>
+            </mat-menu>
+        </div>
+    </div>
+</nav>
