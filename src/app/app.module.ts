@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageModule } from './landing-page/landing-page.module';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { LandingPageModule } from './landing-page/landing-page.module';
     ReactiveFormsModule,
     FormsModule,
     LandingPageModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
