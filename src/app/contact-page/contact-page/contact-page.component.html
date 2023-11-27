@@ -1,0 +1,48 @@
+<div class="contact-container bg-[#f1f1f1] flex h-screen">
+  <div class="left-side w-full md:w-6/12 flex items-center justify-center">
+    <div class="content w-2/4">
+      <div class="heading">
+        <h2 class="text-[40px] text-[#000] font-normal">
+          Lets Get in
+          <span class="text-[#656ED3] text-[40px] font-medium">Touch!</span>
+        </h2>
+        <p class="text[#1A1A1A] text-[16px] font-normal">
+          Have a question or need assistance? Reach out to us via email, phone,
+          or the contact form below. We're eager to assist you.
+        </p>
+        <span class="text-[16px] text-[#656ED3] font-medium"
+          >Nice hearing from you!</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="right-side w-full md:w-6/12 flex justify-center items-center">
+    <div class="contact-content w-2/4">
+      <h2 class="text-[40px] text-[#000] font-normal">Contact Information</h2>
+      <label class="text-[16px] font-normal text-[#000]">Full Name:</label>
+      <input
+        type="text"
+        class="w-[446px] h-[45px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none"
+      />
+
+      <label class="text-[16px] font-normal text-[#000] mt-4">Email:</label>
+      <input
+        type="text"
+        class="w-[446px] h-[45px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none"
+      />
+      <label class="text-[16px] font-normal text-[#000] mt-4">Message:</label>
+      <input
+        type="text"
+        class="w-[446px] h-[216px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none"
+      />
+      <div class="btn flex justify-center items-center">
+        <button
+          (click)="sendMessage()"
+          class="px-[100px] py-[7px] bg-[#656ED3] rounded-[12px] mt-4 text-white"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
