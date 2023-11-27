@@ -3,6 +3,41 @@ input {
     background-color: rgba(175, 179, 255, 0.00);
    
 }
+.content{
+    padding-top: 40px;
+}
+textarea{
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 2500px) {
+
+.heading p {
+    font-size: 25px;
+}
+span {
+    font-size: 25px;
+}
+.contact-content label{
+   font-size: 25px;
+}
+input {
+    font-size: 25px;
+}
+textarea{
+    font-size: 25px;
+}
+}
+button {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1499px) {
+    .contact-content h2 {
+        font-size: 39px;
+    }
+}
+   
 @media screen and (max-width: 1200px) {
     .content {
         width: 82%;

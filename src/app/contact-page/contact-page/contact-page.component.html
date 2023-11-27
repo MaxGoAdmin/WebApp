@@ -1,7 +1,7 @@
-<div class="contact-container bg-[#fafafa] flex h-screen">
-  <div class="left-side w-full md:w-6/12 flex items-center justify-center">
-    <div class="content w-2/4">
-      <div class="heading">
+<div class="contact-container bg-[#fafafa] flex h-screen w-full">
+  <div class="left-side w-full md:w-6/12 flex justify-center items-center">
+    <div class="content w-2/4 pb-10">
+      <div class="heading h-[500px]">
         <h2 class="text-[40px] text-[#000] font-normal">
           Lets Get in
           <span class="text-[#656ED3] text-[40px] font-medium">Touch!</span>
@@ -19,26 +19,42 @@
   <div class="right-side w-full md:w-6/12 flex justify-center items-center">
     <div class="contact-content w-2/4">
       <h2 class="text-[40px] text-[#000] font-normal">Contact Information</h2>
-      <label class="text-[16px] font-normal text-[#000]">Full Name:</label>
+      <label class="text-[16px] font-normal text-[#000] pl-[8px]"
+        >Full Name:</label
+      ><br />
       <input
         type="text"
-        class="w-[446px] h-[45px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none"
+        class="w-[446px] h-[45px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none pl-2"
+        placeholder="Enter Your Name"
       />
+      <br />
 
-      <label class="text-[16px] font-normal text-[#000] mt-4">Email:</label>
+      <label class="text-[16px] font-normal text-[#000] mt-4 pl-[8px]"
+        >Email:</label
+      ><br />
       <input
         type="text"
-        class="w-[446px] h-[45px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none"
+        class="w-[446px] h-[45px] rounded-[50px] mt-4 mb-4 focus:outline-none pl-2"
+        placeholder="eg.@yahoo.com"
       />
-      <label class="text-[16px] font-normal text-[#000] mt-4">Message:</label>
-      <input
-        type="text"
-        class="text-area w-[446px] h-[216px] rounded-[50px] bg-[rgba(175, 179, 255, 0.00); ] mt-4 mb-4 focus:outline-none"
-      />
+      <br />
+      <label for="message">Message:</label>
+
+      <br />
+      <textarea
+        matInput
+        class="w-[446px] h-[216px] rounded-[50px] mt-4 mb-4 focus:outline-none pl-2"
+        id="message"
+        name="message"
+        placeholder="Enter Your Message"
+        rows="4"
+        cols="50"
+      ></textarea>
+      <br />
       <div class="btn flex justify-center items-center">
         <button
           (click)="sendMessage()"
-          class="px-[100px] py-[7px] bg-[#656ED3] rounded-[12px] mt-4 text-white"
+          class="px-[130px] py-[7px] bg-[#656ED3] rounded-[12px] mt-4 text-white"
         >
           Submit
         </button>
