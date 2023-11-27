@@ -1,25 +1,4 @@
-input[type=text] {
-    width: 0px;
-    background-image: url('/assets/image/search-icon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-  
-input[type=text]:focus {
-    width:405px;
-    border: none;
-    outline: none;
-    background-color:#F4F4F4;
-}
-
 .hamburger-icon-div {display: none;}
-
-
-@media screen and (max-width: 859px) {
-    input[type=text]:focus { width:205px; }
-}
 
 @media screen and (max-width: 767px) {
 
@@ -27,7 +6,7 @@ input[type=text]:focus {
 
     .hamburger-icon-div {display: block;}
 
-    input[type=text]:focus {
-        width:100px !important;
-    }
+    .nav-menu { display:none; }
+
+    .nav-notifications-div { margin-left:auto; }
 }
