@@ -12,46 +12,36 @@
     </div>
     <div class="right-side w-4/5 flex items-center">
         <div class="nav-menu pr-[90px] mx-auto">
-            <a class="mr-[20px]" routerLink="/dashboard">Dashboard</a>
-            <a routerLink="/contact">Contacts</a>
+            <a class="mr-[20px] hover:text-[#475BE8]" routerLink="/dashboard">Dashboard</a>
+            <a class="hover:text-[#475BE8]" routerLink="/contact">Contacts</a>
         </div>
         <div class="nav-notifications-div ms-auto relative">
             <div class="bell-icon-div">
-                <img class="w-[7px] h-[7px] absolute top-[2px] right-[3px]" src="assets/image/ellipse-red.png">
-                <img (click)="toggleNotifications()" class="w-[24px] h-[24px]" src="assets/image/bell-icon.png">
-            </div>
-            <div class="notifications-dropdown bg-white absolute top-[53px] right-[-122px] w-[266px] p-[15px] rounded-[15px] shadow-[0_0_6rem_-1.4rem_rgba(0,0,0,0.1)]" *ngIf="shownotifications">
-                <div class="notification-card">
-                    <p class="text-[13px] py-[10px]">John invited you</p>
-                    <hr>
-                </div>
-                <div class="notification-card">
-                    <p class="text-[13px] py-[10px]">You have 1 message from Peter</p>
-                    <hr>
-                </div>
-                <div class="notification-card">
-                    <p class="text-[13px] py-[10px]">Voice message from Tom</p>
-                    <hr>
-                </div>
-                <div class="notification-card">
-                    <p class="text-[13px] py-[10px]">Access request from Albert</p>
-                    <hr>
-                </div>
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <img class="w-[7px] h-[7px] absolute top-[2px] right-[1px]" src="assets/image/ellipse-red.png">
+                    <img class="w-[24px] h-[24px]" src="assets/image/bell-icon.png">
+                </button>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>John invited you</button>
+                <button mat-menu-item>You have message from Peter</button>
+                </mat-menu>
             </div>
         </div>
-        <div class="nav-profile flex pl-[20px]" (click)="toggleProfile()">
-            <div class="profile-img-div">
-                <img class="w-[40px] h-[40px]" src="assets/image/profile-image.png" />
-            </div>
-            <div class="profile-details-div pl-[10px] flex flex-col">
-                <span class="text-[14px] text-[#11142D]">Hawkins Maru</span>
-                <span class="text-[14px] text-[#808191]">Company Manager</span>
-            </div>
-            <div class="notifications-dropdown bg-white absolute top-[79px] right-[50px] w-[150px] p-[15px] rounded-[15px] border-2" *ngIf="showprofileoptions">
-                <div class="logout-div">
-                    <a href="#">Logout</a>
+        <div class="nav-profile pl-[20px]">
+            <button mat-button [matMenuTriggerFor]="profile">
+                <div class="flex">
+                <div class="profile-img-div">
+                    <img class="w-[40px] h-[40px]" src="assets/image/profile-image.png" />
                 </div>
-            </div>
+                <div class="profile-details-div pl-[10px] flex flex-col text-start">
+                    <span class="text-[14px] text-[#11142D]">Hawkins Maru</span>
+                    <span class="text-[14px] text-[#808191]">Company Manager</span>
+                </div>
+                </div>    
+            </button>
+            <mat-menu #profile="matMenu">
+            <button mat-menu-item>Logout</button>
+            </mat-menu>
         </div>
     </div>
 </nav>

@@ -1,5 +1,7 @@
 .hamburger-icon-div {display: none;}
 
+.nav-profile button { padding-top:1.5rem; padding-bottom:1.5rem; }
+
 @media screen and (max-width: 767px) {
 
     nav { padding-right:20px; }

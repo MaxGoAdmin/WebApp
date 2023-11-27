@@ -6,6 +6,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FootercpyrtsComponent } from './footercpyrts/footercpyrts.component';
 
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { FootercpyrtsComponent } from './footercpyrts/footercpyrts.component';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   exports: [ 
     NavbarComponent,
