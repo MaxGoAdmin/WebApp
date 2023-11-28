@@ -1,6 +1,6 @@
-<div class="contact-container bg-[#fafafa] flex h-screen">
-  <div class="left-side w-full md:w-6/12 flex items-center justify-center">
-    <div class="content w-2/4">
+<div class="contact-container bg-[#fafafa] flex items-center">
+  <div class="left-side md:w-1/2 flex items-center justify-center">
+    <div class="content md:w-[345px]">
       <div class="heading">
         <h2 class="text-[40px] text-[#000] font-normal">
           Lets Get in
@@ -16,19 +16,19 @@
       </div>
     </div>
   </div>
-  <div class="right-side w-full md:w-6/12 flex justify-center items-center">
-    <div class="contact-content w-2/4">
-      <h2 class="text-[40px] text-[#000] font-normal">Contact Information</h2>
+  <div class="right-side md:w-1/2 flex justify-start items-center">
+    <div class="contact-content sm:w-[80%] md:w-3/4 py-6">
+      <h2 class="text-[35px] text-[#000] font-normal">Contact Information</h2>
       <div class="contact-form">
         <form
           class="flex flex-col"
           [formGroup]="contactForm"
           (ngSubmit)="onSubmit()"
         >
-          <label class="text-[16px] font-normal text-[#000]">Full Name:</label>
+          <label class="text-[16px] font-normal text-[#000] mt-4">Full Name:</label>
           <input
             type="text"
-            class="w-[446px] h-[45px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
+            class="w-full h-[45px] rounded-[12px] bg-gray-200 mt-4 mb-4 focus:outline-none"
             [class.is-invalid]="c['fullName'].invalid && c['fullName'].touched"
             formControlName="fullName"
           />
@@ -44,10 +44,10 @@
             </div>
           </div>
 
-          <label class="text-[16px] font-normal text-[#000] mt-4">Email:</label>
+          <label class="text-[16px] font-normal text-[#000]">Email:</label>
           <input
             type="text"
-            class="w-[446px] h-[45px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
+            class="w-full h-[45px] rounded-[12px] bg-gray-200 mt-4 mb-4 focus:outline-none"
             [class.is-invalid]="c['email'].invalid && c['email'].touched"
             formControlName="email"
           />
@@ -62,13 +62,13 @@
               email is required
             </div>
           </div>
-          <label class="text-[16px] font-normal text-[#000] mt-4"
+          <label class="text-[16px] font-normal text-[#000]"
             >Message:</label
           >
           <textarea
             rows="4"
             cols="50"
-            class="text-area w-[446px] h-[216px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
+            class="text-area w-full h-[216px] rounded-[12px] bg-gray-200 mt-4 mb-4 focus:outline-none"
           >
           </textarea>
           <div class="btn flex justify-center items-center">

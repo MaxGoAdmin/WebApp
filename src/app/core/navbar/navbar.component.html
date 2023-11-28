@@ -1,5 +1,7 @@
-<nav class="navbar flex bg-white pl-[20px] pr-[55px] py-[15px]">
-  <div class="left-side w-1/5 flex justify-start items-center relative">
+<nav
+  class="navbar flex justify-between bg-[#3F51B5] pl-[20px] pr-[55px] py-[15px]"
+>
+  <div class="left-side w-2/5 flex items-center relative">
     <div class="hamburger-icon-div">
       <img
         (click)="togglehamburgermenu()"
@@ -8,30 +10,36 @@
       />
     </div>
     <div
-      class="hamburger-menu bg-gray-200 w-[90vw] absolute top-[63px] bg-white p-[15px] rounded-[15px]"
+      class="hamburger-menu bg-[#e6e1e1] w-[90vw] absolute top-[63px] p-[15px]"
       *ngIf="showhamburgermenu"
     >
       <ul class="text-center">
-        <li class="py-3"><a routerLink="/dashboard">Dashboard</a></li>
-        <li class="py-3"><a routerLink="/contact">Contacts</a></li>
+        <li class="py-3 text-[#475BE8]">
+          <a routerLink="/dashboard">Dashboard</a>
+        </li>
+        <li class="py-3 text-[#475BE8]">
+          <a routerLink="/contact">Contacts</a>
+        </li>
       </ul>
     </div>
   </div>
-  <div class="right-side w-4/5 flex items-center">
-    <div class="nav-menu pr-[90px] mx-auto">
-      <a class="mr-[20px] hover:text-[#475BE8]" routerLink="/dashboard"
-        >Dashboard</a
-      >
-      <a class="hover:text-[#475BE8]" routerLink="/contact">Contacts</a>
+  <div class="nav-center w-1/5 flex justify-center items-center">
+    <div class="nav-menu">
+      <a class="mr-[20px] text-[#ffffff]" routerLink="/dashboard">Dashboard</a>
+      <a class="text-[#ffffff]" routerLink="/contact">Contacts</a>
     </div>
-    <div class="nav-notifications-div ms-auto relative">
+  </div>
+  <div class="right-side w-2/5 flex justify-end items-center">
+    <div class="nav-notifications-div relative">
       <div class="bell-icon-div">
         <button mat-button [matMenuTriggerFor]="menu">
-          <img
-            class="w-[7px] h-[7px] absolute top-[2px] right-[1px]"
-            src="assets/image/ellipse-red.png"
-          />
-          <img class="w-[24px] h-[24px]" src="assets/image/bell-icon.png" />
+          <mat-icon
+            matBadge="2"
+            matBadgeColor="warn"
+            matBadgeSize="small"
+            fontIcon="notifications"
+            class="text-white"
+          ></mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item>John invited you</button>
@@ -39,24 +47,24 @@
         </mat-menu>
       </div>
     </div>
-    <div class="nav-profile pl-[20px]">
+    <div class="nav-profile">
       <button mat-button [matMenuTriggerFor]="profile">
         <div class="flex">
           <div class="profile-img-div">
-            <img
-              class="w-[40px] h-[40px]"
-              src="assets/image/profile-image.png"
-            />
+            <img class="w-[40px] h-[40px]" src="assets/image/avatar.webp" />
           </div>
-          <div class="profile-details-div pl-[10px] flex flex-col text-start">
-            <span class="text-[14px] text-[#11142D]">{{ userName }}</span>
-            <span class="text-[14px] text-[#808191]">Company Manager</span>
+          <div class="profile-details-div pl-[10px] text-start flex flex-col">
+            <span class="text-[14px] text-[#ffffff]">Hawkins Maru</span>
+            <span class="text-[14px] text-[#ffffff]">Company Manager</span>
           </div>
         </div>
       </button>
-      <mat-menu #profile="matMenu">
+      <mat-menu #profile="matMenu" xPosition="before">
         <button mat-menu-item (click)="logoutHandler()">Logout</button>
       </mat-menu>
     </div>
+    <!-- <mat-menu #profile="matMenu">
+      <button mat-menu-item (click)="logoutHandler()">Logout</button>
+    </mat-menu> -->
   </div>
 </nav>
