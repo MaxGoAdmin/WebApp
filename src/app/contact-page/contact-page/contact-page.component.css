@@ -96,6 +96,8 @@ button {
   }
 }
 
+@media screen and (max-width: 800px) {
+
 
 @media screen and (max-width: 768px) {
     .contact-container{
@@ -162,10 +164,6 @@ input {
 textarea{
     height:150px
 }
-.content {
-    text-align: center;
-
-}
 }
 @media screen and (max-width: 375px) {
     .heading p {
@@ -190,8 +188,6 @@ textarea{
         font-size: 30px;
     }
 
-.content {
-    text-align: center;
 
-}
+
 }
