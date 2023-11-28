@@ -84,10 +84,6 @@ input {
    form label {
     font-size:14px;
    }
-
-   form input {
-    border-radius: 15px;
-   }
 }
 
 @media screen and (max-width: 450px) {
