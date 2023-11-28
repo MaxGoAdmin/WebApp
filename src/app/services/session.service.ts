@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 const USERNAME = 'Username';
 const ISLOGEDIN = 'LogedIn';
@@ -7,6 +8,9 @@ const ISLOGEDIN = 'LogedIn';
   providedIn: 'root',
 })
 export class SessionService {
+  private isLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    false
+  );
   constructor() {}
 
   public storeUserName(name: string): void {
@@ -29,5 +33,13 @@ export class SessionService {
 
   public signOutHandler(): void {
     localStorage.clear();
+  }
+
+  public setLoadingState(loading: boolean): void {
+    this.isLoading.next(loading);
+  }
+
+  public get hasLoading(): Observable<boolean> {
+    return this.isLoading;
   }
 }

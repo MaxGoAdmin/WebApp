@@ -9,25 +9,17 @@ import { CoreModule } from './core/core.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
 
 import { SigninModule } from './signin/signin.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-
-  declarations: [
-    AppComponent,
-  ],
- 
-
+  declarations: [AppComponent],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    HttpClientModule,
     CoreModule,
-
-
-
-
 
     SigninModule,
 
