@@ -19,10 +19,32 @@
           <mat-form-field class="example-full-width">
             <mat-label>Enter Latitude:</mat-label>
             <input matInput formControlName="lat" />
+            <div
+              class="alert alert-danger pt-[0.8rem]"
+              *ngIf="l['lat'].invalid && l['lat'].touched"
+            >
+              <div
+                class="text-red-600"
+                *ngIf="l['lat'].errors && l['lat'].errors['required']"
+              >
+                latitude is required
+              </div>
+            </div>
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>Enter Longititude:</mat-label>
             <input matInput formControlName="lng" />
+            <div
+              class="alert alert-danger pt-[0.8rem]"
+              *ngIf="l['lng'].invalid && l['lng'].touched"
+            >
+              <div
+                class="text-red-600"
+                *ngIf="l['lng'].errors && l['lng'].errors['required']"
+              >
+                langititude is required
+              </div>
+            </div>
           </mat-form-field>
 
           <!-- <label class="text-[16px] font-normal text-[#000]">Lng:</label>
@@ -34,6 +56,17 @@
           <mat-form-field>
             <mat-label>Pick a date</mat-label>
             <input matInput [matDatepicker]="picker" formControlName="date" />
+            <div
+              class="alert alert-danger pt-[0.8rem]"
+              *ngIf="l['date'].invalid && l['date'].touched"
+            >
+              <div
+                class="text-red-600"
+                *ngIf="l['date'].errors && l['date'].errors['required']"
+              >
+                date is required
+              </div>
+            </div>
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle
               matIconSuffix

@@ -1,6 +1,7 @@
 import { Component, Inject, LOCALE_ID, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
+import { AbstractControl } from '@angular/forms';
 import {
   ISunriseDTO,
   ISunrisePayload,
@@ -82,5 +83,8 @@ export class SunriseComponent implements OnInit {
     if (sunrise) {
       this.sunriseSunset = sunrise;
     }
+  }
+  get l(): { [key: string]: AbstractControl } {
+    return this.sunriseForm.controls;
   }
 }
