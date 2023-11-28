@@ -1,7 +1,14 @@
+
+textarea{
+    padding-top: 20px;
+}
+.alert {
+    padding-top: 0;
+}
 input {
-    border: 1px solid #656ED3;
-    background-color: rgba(175, 179, 255, 0.00);
-   
+    padding-top: 5px;
+    /* padding-right: 28px; */
+    padding-left: 20px;
 }
 @media screen and (max-width: 1200px) {
     .content {
