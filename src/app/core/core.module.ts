@@ -8,6 +8,8 @@ import { FootercpyrtsComponent } from './footercpyrts/footercpyrts.component';
 
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {MatButtonModule} from '@angular/material/button';
     CoreRoutingModule,
     MatToolbarModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatBadgeModule
   ],
   exports: [ 
     NavbarComponent,
