@@ -162,7 +162,10 @@ input {
 textarea{
     height:150px
 }
+.content {
+    text-align: center;
 
+}
 }
 @media screen and (max-width: 375px) {
     .heading p {
@@ -173,6 +176,7 @@ textarea{
     height:160px
 }
 }
+
 @media screen and (max-width: 320px) {
     textarea{
         width:274px;
@@ -185,4 +189,9 @@ textarea{
     .contact-content h2 {
         font-size: 30px;
     }
+
+.content {
+    text-align: center;
+
+}
 }

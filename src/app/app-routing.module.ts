@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/signin', pathMatch: 'full' },
-
   {
     path: 'contact',
     loadChildren: () =>
@@ -18,6 +16,21 @@ const routes: Routes = [
         (m) => m.DashboardPageModule
       ),
   },
+  {
+    path: 'properties',
+    loadChildren: () =>
+      import('./landing-page/landing-page.module').then(
+        (m) => m.LandingPageModule
+      ),
+  },
+
+  {
+    path: 'signin',
+    loadChildren: () =>
+      import('./signin/signin.module').then((m) => m.SigninModule),
+  },
+
+  { path: '', redirectTo: '/signin', pathMatch: 'full' },
 ];
 
 @NgModule({

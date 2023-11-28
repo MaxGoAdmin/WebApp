@@ -4,15 +4,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from './core/core.module';
+
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { MatInputModule } from '@angular/material/input';
 
+import { SigninModule } from './signin/signin.module';
+
 @NgModule({
-  declarations: [AppComponent],
+
+  declarations: [
+    AppComponent,
+  ],
+ 
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
+    CoreModule,
+
+
+
+
+
+    SigninModule,
+
     ReactiveFormsModule,
     FormsModule,
     LandingPageModule,
