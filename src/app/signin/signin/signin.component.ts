@@ -29,13 +29,12 @@ export class SigninComponent {
   get f() {
     return this.signinForm.controls;
   }
-  openSignUp() {
-    this.router.navigate(['/signup']);
-  }
+
   redirectForget() {
     this.router.navigate(['/forgot-password']);
   }
+
   redirectDashboard() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/landing/dashboard']);
   }
 }

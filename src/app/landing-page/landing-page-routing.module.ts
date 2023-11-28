@@ -6,6 +6,22 @@ const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('../dashboard-page/dashboard-page.module').then(
+            (m) => m.DashboardPageModule
+          ),
+      },
+      {
+        path: 'contact',
+        loadChildren: () =>
+          import('../contact-page/contact-page.module').then(
+            (m) => m.ContactPageModule
+          ),
+      },
+    ],
   },
 ];
 
