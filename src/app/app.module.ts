@@ -11,23 +11,14 @@ import { LandingPageModule } from './landing-page/landing-page.module';
 import { SigninModule } from './signin/signin.module';
 
 @NgModule({
-
-  declarations: [
-    AppComponent,
-  ],
- 
-
+  declarations: [AppComponent],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    ReactiveFormsModule,
     CoreModule,
-
-
-
-
 
     SigninModule,
 
