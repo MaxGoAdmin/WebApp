@@ -16,6 +16,10 @@
     right:-12px !important;
 }
 
+@media screen and (min-width: 767px) {
+    .left-side { display: none; }
+}
+
 @media screen and (max-width: 767px) {
 
     nav { padding-right:20px; }
