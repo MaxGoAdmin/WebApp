@@ -1,6 +1,6 @@
-<div class="catFactContainer">
+<div class="catFactContainer mt-[30px]">
   <mat-card>
-    <div class="title">
+    <div class="title text-left text-[48px] font-bold mb-[25px]">
       <h3>Sunrise / Sunset Information</h3>
     </div>
     <div class="sunriseFormContainer">
@@ -9,46 +9,48 @@
         [formGroup]="sunriseForm"
         (ngSubmit)="onSubmitSunriseHandler()"
       >
-        <label class="text-[16px] font-normal text-[#000]">Lat:</label>
-        <!-- <input
+        <div class="outer-wrapper">
+          <!-- <label class="text-[16px] font-normal text-[#000]">Lat:</label> -->
+          <!-- <input
             type="number"
             class="w-[446px] h-[45px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
             formControlName="lat"
           /> -->
-        <mat-form-field class="example-full-width">
-          <mat-label>Lat:</mat-label>
-          <input matInput formControlName="lat" />
-        </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <mat-label>Lng:</mat-label>
-          <input matInput formControlName="lng" />
-        </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Enter Latitude:</mat-label>
+            <input matInput formControlName="lat" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Enter Longititude:</mat-label>
+            <input matInput formControlName="lng" />
+          </mat-form-field>
 
-        <!-- <label class="text-[16px] font-normal text-[#000]">Lng:</label>
+          <!-- <label class="text-[16px] font-normal text-[#000]">Lng:</label>
           <input
             type="number"
             class="w-[446px] h-[45px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
             formControlName="lng"
           /> -->
-        <mat-form-field>
-          <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="date" />
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle
-            matIconSuffix
-            [for]="picker"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <div class="actionButton">
-          <button
-            mat-raised-button
-            color="primary"
-            type="submit"
-            [disabled]="sunriseForm.invalid"
-          >
-            Get Sunrise / Sunset Time
-          </button>
+          <mat-form-field>
+            <mat-label>Pick a date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <div class="actionButton">
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="sunriseForm.invalid"
+            >
+              Get Sunrise / Sunset Time
+            </button>
+          </div>
         </div>
       </form>
     </div>
