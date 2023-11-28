@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ISunriseDTO, ISunrisePayload } from '../dashboard-page/models/sunrise';
 
 const USERNAME = 'Username';
 const ISLOGEDIN = 'LogedIn';
+const SUNRISE = 'Sunrise';
+const LATLNG = 'Latlng';
 
 @Injectable({
   providedIn: 'root',
@@ -41,5 +44,23 @@ export class SessionService {
 
   public get hasLoading(): Observable<boolean> {
     return this.isLoading;
+  }
+
+  public storeSunrise(sunrise: ISunriseDTO): void {
+    localStorage.setItem(SUNRISE, JSON.stringify(sunrise));
+  }
+
+  public getSunrise(): ISunriseDTO | null {
+    const sunrise = localStorage.getItem(SUNRISE);
+    return sunrise ? JSON.parse(sunrise) : null;
+  }
+
+  public storeSunrisePayload(payload: ISunrisePayload): void {
+    localStorage.setItem(LATLNG, JSON.stringify(payload));
+  }
+
+  public getSunrisePayload(): ISunrisePayload | null {
+    const sunrise = localStorage.getItem(LATLNG);
+    return sunrise ? JSON.parse(sunrise) : null;
   }
 }

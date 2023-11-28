@@ -7,6 +7,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SunriseComponent } from './sunrise/sunrise.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 const routes: Routes = [
   {
     path: '',
@@ -15,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DashboardPageComponent, CatFactComponent],
+  declarations: [DashboardPageComponent, CatFactComponent, SunriseComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -23,6 +28,10 @@ const routes: Routes = [
     MatButtonModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
   ],
   exports: [DashboardPageComponent],
 })
