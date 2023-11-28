@@ -40,6 +40,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public logoutHandler(): void {
+    this.sessionService.signOutHandler();
     this.router.navigate(['/signin']);
   }
 }
