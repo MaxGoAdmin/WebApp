@@ -10,7 +10,9 @@
           Have a question or need assistance? Reach out to us via email, phone,
           or the contact form below. We're eager to assist you.
         </p>
-        <span class="text-[16px] text-[#656ED3] font-medium">Nice hearing from you!</span>
+        <span class="text-[16px] text-[#656ED3] font-medium"
+          >Nice hearing from you!</span
+        >
       </div>
     </div>
   </div>
@@ -18,7 +20,11 @@
     <div class="contact-content sm:w-[80%] md:w-3/4 py-6">
       <h2 class="text-[35px] text-[#000] font-normal">Contact Information</h2>
       <div class="contact-form">
-        <form class="flex flex-col" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <form
+          class="flex flex-col"
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+        >
           <label class="text-[16px] font-normal text-[#000]">Full Name:</label>
           <input
             type="text"

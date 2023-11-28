@@ -60,6 +60,9 @@ input {
     .right-side {
         justify-content: center !important;
     }
+     .heading {
+        height:361px ;
+    }
     
     .contact-content h2 {
         font-size: 22px;
@@ -68,6 +71,14 @@ input {
     }
    .text {
     display: block;
+   }
+   input {
+    width:400px;
+    height: 50px;
+   }
+   textarea{
+    width: 400px;
+    height:200px
    }
 
    form label {
