@@ -1,0 +1,9 @@
+.landingContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #fafafa;
+}
+.customHeightContainer {
+    flex: 1;
+}
