@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AuthGuard } from '../guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
           import('../dashboard-page/dashboard-page.module').then(
             (m) => m.DashboardPageModule
           ),
+        canActivate: [AuthGuard],
       },
       {
         path: 'contact',
@@ -20,6 +22,7 @@ const routes: Routes = [
           import('../contact-page/contact-page.module').then(
             (m) => m.ContactPageModule
           ),
+        canActivate: [AuthGuard],
       },
     ],
   },

@@ -32,9 +32,9 @@ export class SigninComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    console.log(this.signinForm.value);
-    this.router.navigate(['/landing/dashboard']);
     this.sessionService.storeUserName(this.signinForm.value.username);
+    this.sessionService.userAuthenticated();
+    this.router.navigate(['/landing/dashboard']);
   }
 
   get f(): { [key: string]: AbstractControl } {

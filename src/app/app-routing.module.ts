@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -8,6 +9,7 @@ const routes: Routes = [
       import('./landing-page/landing-page.module').then(
         (m) => m.LandingPageModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'signin',
