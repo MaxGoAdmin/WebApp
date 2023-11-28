@@ -1,40 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {
+  AbstractControl,
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css'],
 })
-export class SigninComponent {
-  constructor(private fb: FormBuilder, private router: Router) {}
+export class SigninComponent implements OnInit {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private sessionService: SessionService
+  ) {}
+  signinForm!: FormGroup;
 
-  signinForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required]],
-  });
+  ngOnInit(): void {
+    this.signinFormHandler();
+  }
+
+  private signinFormHandler(): void {
+    this.signinForm = this.fb.group({
+      username: ['', [Validators.required]],
+    });
+  }
 
   public onSubmit(): void {
-    let email = this.signinForm.controls['email'].value;
-    let password = this.signinForm.controls['password'].value;
-
-    alert('Email: ' + email + '\nPassword: ' + password);
-  }
-  get f() {
-    return this.signinForm.controls;
-  }
-
-  redirectForget() {
-    this.router.navigate(['/forgot-password']);
-  }
-
-  redirectDashboard() {
+    console.log(this.signinForm.value);
     this.router.navigate(['/landing/dashboard']);
+    this.sessionService.storeUserName(this.signinForm.value.username);
+  }
+
+  get f(): { [key: string]: AbstractControl } {
+    return this.signinForm.controls;
   }
 }

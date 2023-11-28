@@ -13,97 +13,38 @@
           [formGroup]="signinForm"
           (ngSubmit)="onSubmit()"
         >
-          <label class="mb-[0.4rem]" for="fname">Email</label>
+          <label class="mb-[0.4rem]" for="fname">Username</label>
           <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
+            type="text"
+            name="username"
+            placeholder="Enter your username"
             class="py-[0.7rem] px-[0.8rem] border-2 border-[#E4E4E4] rounded-[1rem]"
-            [class.is-invalid]="f['email'].invalid && f['email'].touched"
-            formControlName="email"
+            [class.is-invalid]="f['username'].invalid && f['username'].touched"
+            formControlName="username"
           />
           <div
             class="alert alert-danger pt-[0.8rem]"
-            *ngIf="f['email'].invalid && f['email'].touched"
+            *ngIf="f['username'].invalid && f['username'].touched"
           >
             <div
               class="text-red-600"
-              *ngIf="f['email'].errors && f['email'].errors['required']"
+              *ngIf="f['username'].errors && f['username'].errors['required']"
             >
-              Email is required
-            </div>
-            <div
-              class="text-red-600"
-              *ngIf="f['email'].errors && f['email'].errors['email']"
-            >
-              Invalid Email
-            </div>
-          </div>
-
-          <label class="mt-[1.5rem] mb-[0.4rem]" for="fname">Password</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="**********"
-            class="py-[0.7rem] px-[0.8rem] border-2 border-[#E4E4E4] rounded-[1rem]"
-            [class.is-invalid]="f['password'].invalid && f['password'].touched"
-            formControlName="password"
-          />
-          <div
-            class="alert alert-danger pt-[0.8rem]"
-            *ngIf="f['password'].invalid && f['password'].touched"
-          >
-            <div
-              class="text-red-600"
-              *ngIf="f['password'].errors && f['password'].errors['required']"
-            >
-              Password is required
-            </div>
-          </div>
-          <div class="flex justify-between mt-[1.5rem]">
-            <div class="flex">
-              <input
-                type="checkbox"
-                class="w-[1rem] h-[1rem] border-2 border-[#E4E4E4] rounded-[0.4rem] me-[0.6rem]"
-                name="reminder"
-                value="reminder"
-              />
-              <label for="reminder"> Remember me</label>
-            </div>
-            <div class="link">
-              <a
-                (click)="redirectForget()"
-                class="text-[#475BE8] cursor-pointer"
-                >Forgot Password</a
-              >
+              username is required
             </div>
           </div>
           <button
-            (click)="redirectDashboard()"
             type="submit"
             [disabled]="signinForm.invalid"
             class="w-full py-[0.7rem] bg-[#475BE8] text-white rounded-[1rem] mt-[2rem]"
           >
             Sign in
           </button>
-          <div class="signin-with-google pt-[2rem]">
-            <button
-              class="btn-signin-google w-full py-[0.7rem] bg-white border-2 border-[#E4E4E4] rounded-[1rem] flex justify-center"
-            >
-              <img
-                class="me-[1rem]"
-                src="../../../assets/image/Google__G__Logo (1) 1.png"
-              />Sign in with Google
-            </button>
-          </div>
-          <div class="signup-link pt-[3rem] text-center">
-            <a>Don't have an Account? Sign up</a>
-          </div>
         </form>
       </div>
     </div>
   </div>
-  <div class="right-side w-full md:w-6/12 hidden md:block">
-    <img class="w-[85%] mt-[12%]" src="../../../assets/image/amico.png" />
+  <div class="right-side w-full md:w-6/12 flex items-center">
+    <img class="w-full" src="../../../assets/image/amico.png" />
   </div>
 </div>
