@@ -19,13 +19,20 @@ mat-card{
         font-size: 22px;
     }
 }
-@media screen and (max-width: 600px) {
 
-.outer-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap:14px;
+@media screen and (max-width: 890px) {
+    .outer-wrapper{
+        gap: 10px
+    }
 }
+
+@media screen and (max-width: 810px) {
+
+    .outer-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap:14px;
+    }
 }
 
 

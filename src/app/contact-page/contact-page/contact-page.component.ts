@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import {
   AbstractControl,
   FormBuilder,
@@ -13,7 +12,7 @@ import {
   styleUrls: ['./contact-page.component.css'],
 })
 export class ContactPageComponent implements OnInit {
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private fb: FormBuilder) {}
   contactForm!: FormGroup;
 
   ngOnInit(): void {
@@ -27,9 +26,7 @@ export class ContactPageComponent implements OnInit {
     });
   }
 
-  public onSubmit(): void {
-    this.router.navigate(['/landing/contact']);
-  }
+  public onSubmit(): void {}
   get c(): { [key: string]: AbstractControl } {
     return this.contactForm.controls;
   }
