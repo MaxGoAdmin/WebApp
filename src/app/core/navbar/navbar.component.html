@@ -1,24 +1,29 @@
 <nav
-  class="navbar flex justify-between bg-[#3F51B5] pl-[20px] pr-[55px] py-[15px]"
+  class="navbar flex justify-between bg-[#3F51B5] pl-[20px] pr-[15px] py-[15px] relative"
 >
-  <div class="left-side w-2/5 flex items-center relative">
+  <div class="left-side w-2/5 flex items-center">
     <div class="hamburger-icon-div">
-      <img
+      <!-- <img src="assets/image/hamburger-icon.png" /> -->
+      <mat-icon
+        class="text-[#fff] hamburgericon-img"
         (click)="togglehamburgermenu()"
-        class="w-[18px] h-[14px] hamburgericon-img"
-        src="assets/image/hamburger-icon.png"
-      />
+        >view_headline</mat-icon
+      >
     </div>
     <div
-      class="hamburger-menu bg-[#e6e1e1] w-[90vw] absolute top-[63px] p-[15px]"
+      class="hamburger-menu bg-[#edf0ff] w-full absolute top-[78px] p-[15px] left-[0] z-[9999] border-[#eee] border-solid"
       *ngIf="showhamburgermenu"
     >
       <ul class="text-center">
         <li class="py-3 text-[#475BE8]">
-          <a routerLink="/dashboard">Dashboard</a>
+          <a routerLink="/dashboard" (click)="showhamburgermenu = false"
+            >Dashboard</a
+          >
         </li>
         <li class="py-3 text-[#475BE8]">
-          <a routerLink="/contact">Contacts</a>
+          <a routerLink="/contact" (click)="showhamburgermenu = false"
+            >Contacts</a
+          >
         </li>
       </ul>
     </div>
@@ -32,7 +37,11 @@
   <div class="right-side w-2/5 flex justify-end items-center">
     <div class="nav-notifications-div relative">
       <div class="bell-icon-div">
-        <button mat-button [matMenuTriggerFor]="menu">
+        <button
+          mat-button
+          [matMenuTriggerFor]="menu"
+          (click)="showhamburgermenu = false"
+        >
           <mat-icon
             matBadge="2"
             matBadgeColor="warn"
@@ -48,7 +57,11 @@
       </div>
     </div>
     <div class="nav-profile">
-      <button mat-button [matMenuTriggerFor]="profile">
+      <button
+        mat-button
+        [matMenuTriggerFor]="profile"
+        (click)="showhamburgermenu = false"
+      >
         <div class="flex">
           <div class="profile-img-div">
             <img class="w-[40px] h-[40px]" src="assets/image/avatar.webp" />
@@ -63,8 +76,5 @@
         <button mat-menu-item (click)="logoutHandler()">Logout</button>
       </mat-menu>
     </div>
-    <!-- <mat-menu #profile="matMenu">
-      <button mat-menu-item (click)="logoutHandler()">Logout</button>
-    </mat-menu> -->
   </div>
 </nav>

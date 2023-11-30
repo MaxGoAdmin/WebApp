@@ -4,7 +4,7 @@ import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'landing',
+    path: '',
     loadChildren: () =>
       import('./landing-page/landing-page.module').then(
         (m) => m.LandingPageModule
@@ -16,8 +16,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./signin/signin.module').then((m) => m.SigninModule),
   },
-
-  { path: '', redirectTo: '/signin', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: '/dashboard',
+  },
 ];
 
 @NgModule({

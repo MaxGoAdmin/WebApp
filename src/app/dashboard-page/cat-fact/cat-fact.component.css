@@ -2,7 +2,11 @@ mat-card{
     padding: 20px 20px;
     border-radius: 20px;
 }
-
+@media screen and (max-width: 767px) {
+    .title h3, .times h3{
+        font-size: 22px;
+    }
+}
 
 @media screen and (max-width: 600px) {
 

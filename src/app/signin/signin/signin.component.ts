@@ -34,7 +34,7 @@ export class SigninComponent implements OnInit {
   public onSubmit(): void {
     this.sessionService.storeUserName(this.signinForm.value.username);
     this.sessionService.userAuthenticated();
-    this.router.navigate(['/landing/dashboard']);
+    this.router.navigate(['/dashboard']);
   }
 
   get f(): { [key: string]: AbstractControl } {

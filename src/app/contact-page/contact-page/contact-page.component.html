@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="right-side md:w-1/2 flex justify-start items-center">
-    <div class="contact-content sm:w-[80%] md:w-3/4 py-6">
+    <div class="contact-content sm:w-[80%] md:w-3/4 py-14">
       <h2 class="text-[35px] text-[#000] font-normal">Contact Information</h2>
       <div class="contact-form">
         <form
@@ -25,7 +25,9 @@
           [formGroup]="contactForm"
           (ngSubmit)="onSubmit()"
         >
-          <label class="text-[16px] font-normal text-[#000] mt-4">Full Name:</label>
+          <label class="text-[16px] font-normal text-[#000] mt-4"
+            >Full Name:</label
+          >
           <input
             type="text"
             class="w-full h-[45px] rounded-[12px] bg-gray-200 mt-4 mb-4 focus:outline-none"
@@ -62,9 +64,7 @@
               email is required
             </div>
           </div>
-          <label class="text-[16px] font-normal text-[#000]"
-            >Message:</label
-          >
+          <label class="text-[16px] font-normal text-[#000]">Message:</label>
           <textarea
             rows="4"
             cols="50"

@@ -80,6 +80,7 @@
               color="primary"
               type="submit"
               [disabled]="sunriseForm.invalid"
+              class="h-[56px]"
             >
               Get Sunrise / Sunset Time
             </button>
@@ -88,9 +89,9 @@
       </form>
     </div>
     <div class="sunriseTimeDisplayContainer">
-      <div class="times" *ngIf="sunriseSunset">
-        <h3>Sunrise: {{ sunriseSunset.sunrise }}</h3>
-        <h3>Sunset: {{ sunriseSunset.sunset }}</h3>
+      <div class="times my-10 text-center" *ngIf="sunriseSunset">
+        <h3 class="text-[48px]">Sunrise: {{ sunriseSunset.sunrise }}</h3>
+        <h3 class="text-[48px]">Sunset: {{ sunriseSunset.sunset }}</h3>
       </div>
     </div>
   </mat-card>

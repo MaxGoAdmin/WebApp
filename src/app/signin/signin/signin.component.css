@@ -103,3 +103,6 @@ button {
     }
    
     }
+.featureImage img {
+    max-height: 100%;
+}

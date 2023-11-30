@@ -8,12 +8,17 @@ mat-card{
   
 }
 .actionButton button {
-    padding: 30px;
+    height: 56px!important;
 }
 .outer-wrapper mat-form-field{
     flex: 1;
 }
 
+@media screen and (max-width: 767px) {
+    .title h3, .times h3{
+        font-size: 22px;
+    }
+}
 @media screen and (max-width: 600px) {
 
 .outer-wrapper{
