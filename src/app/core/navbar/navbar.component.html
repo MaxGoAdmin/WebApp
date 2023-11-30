@@ -1,4 +1,6 @@
-<nav class="navbar flex justify-between bg-[#3F51B5] pl-[20px] pr-[55px] py-[15px]">
+<nav
+  class="navbar flex justify-between bg-[#3F51B5] pl-[20px] pr-[55px] py-[15px]"
+>
   <div class="left-side w-2/5 flex items-center relative">
     <div class="hamburger-icon-div">
       <img
@@ -23,9 +25,7 @@
   </div>
   <div class="nav-center w-1/5 flex justify-center items-center">
     <div class="nav-menu">
-      <a class="mr-[20px] text-[#ffffff]" routerLink="/dashboard"
-        >Dashboard</a
-      >
+      <a class="mr-[20px] text-[#ffffff]" routerLink="/dashboard">Dashboard</a>
       <a class="text-[#ffffff]" routerLink="/contact">Contacts</a>
     </div>
   </div>
@@ -60,11 +60,11 @@
         </div>
       </button>
       <mat-menu #profile="matMenu" xPosition="before">
-        <button mat-menu-item routerLink="/properties">Logout</button>
+        <button mat-menu-item (click)="logoutHandler()">Logout</button>
       </mat-menu>
     </div>
-    <mat-menu #profile="matMenu">
+    <!-- <mat-menu #profile="matMenu">
       <button mat-menu-item (click)="logoutHandler()">Logout</button>
-    </mat-menu>
+    </mat-menu> -->
   </div>
 </nav>
