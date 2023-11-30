@@ -10,63 +10,32 @@
         (ngSubmit)="onSubmitSunriseHandler()"
       >
         <div class="outer-wrapper">
-          <!-- <label class="text-[16px] font-normal text-[#000]">Lat:</label> -->
-          <!-- <input
-            type="number"
-            class="w-[446px] h-[45px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
-            formControlName="lat"
-          /> -->
           <mat-form-field class="example-full-width">
             <mat-label>Enter Latitude:</mat-label>
             <input matInput formControlName="lat" />
-            <div
-              class="alert alert-danger pt-[0.8rem]"
-              *ngIf="l['lat'].invalid && l['lat'].touched"
+            <mat-error
+              *ngIf="l['lat'].hasError('required') && l['lat'].touched"
             >
-              <div
-                class="text-red-600"
-                *ngIf="l['lat'].errors && l['lat'].errors['required']"
-              >
-                latitude is required
-              </div>
-            </div>
+              Please enter a latitude
+            </mat-error>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <mat-label>Enter Longititude:</mat-label>
+            <mat-label>Enter Longitude:</mat-label>
             <input matInput formControlName="lng" />
-            <div
-              class="alert alert-danger pt-[0.8rem]"
-              *ngIf="l['lng'].invalid && l['lng'].touched"
+            <mat-error
+              *ngIf="l['lng'].hasError('required') && l['lng'].touched"
             >
-              <div
-                class="text-red-600"
-                *ngIf="l['lng'].errors && l['lng'].errors['required']"
-              >
-                langititude is required
-              </div>
-            </div>
+              Please enter a longitude
+            </mat-error>
           </mat-form-field>
-
-          <!-- <label class="text-[16px] font-normal text-[#000]">Lng:</label>
-          <input
-            type="number"
-            class="w-[446px] h-[45px] rounded-[50px] bg-gray-200 mt-4 mb-4 focus:outline-none"
-            formControlName="lng"
-          /> -->
           <mat-form-field>
             <mat-label>Pick a date</mat-label>
             <input matInput [matDatepicker]="picker" formControlName="date" />
-            <div
-              class="alert alert-danger pt-[0.8rem]"
-              *ngIf="l['date'].invalid && l['date'].touched"
+            <mat-error
+              *ngIf="l['date'].hasError('required') && l['date'].touched"
             >
-              <div
-                class="text-red-600"
-                *ngIf="l['date'].errors && l['date'].errors['required']"
-              >
-                date is required
-              </div>
-            </div>
+              Please enter a valid date
+            </mat-error>
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle
               matIconSuffix
